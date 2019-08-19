@@ -1,4 +1,8 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## A sign-in and edit-my-users example app
+
+This app uses React (with [Create React App](https://github.com/facebook/create-react-app) and [hooks](https://reactjs.org/docs/hooks-intro.html)), Google Sign In, [material-ui](https://material-ui.com/components/dialogs/#dialogs), [reach-router](https://reach.tech/router), and [myjson](http://myjson.com) to demonstrate how a SPA edit-users app with sig-in might look like.
+
+The authentication is demo only. Can be bypassed by going directly to /users. A real world example might use [context hook](https://reactjs.org/docs/hooks-reference.html#usecontext).
 
 ## Available Scripts
 

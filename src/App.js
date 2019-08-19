@@ -1,25 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { GoogleLogin } from 'react-google-login';
+import React, {  } from 'react';
+import { Router, navigate } from "@reach/router";
+import UsersTable from './UsersTable';
+import './center.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router className="center">
+      <GoogleLogin path="/"
+        clientId="1076638153621-b5stn6dri8r9q0klhp9s4sis6u0g67le.apps.googleusercontent.com"
+        onSuccess={async () => await navigate("users")}        
+      />
+      <UsersTable path="users/" />
+      <UsersTable path="users/:userId" />
+    </Router>
   );
 }
 
